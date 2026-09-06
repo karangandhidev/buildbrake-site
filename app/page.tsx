@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { ArrowRight, Check, CheckCircle2, Clipboard, Clock3, Command, FileCode2, Gauge, ShieldCheck, TerminalSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -23,8 +24,8 @@ export default function Home() {
     <main>
       <nav className="site-nav" aria-label="Main navigation">
         <a className="wordmark" href="#top" aria-label="BuildBrake home"><span className="mark"><span /></span>BuildBrake</a>
-        <div className="nav-links"><a href="#how-it-works">How it works</a><a href="#evidence">Evidence</a><a href="#install">Install</a></div>
-        <Button className="github-button" render={<a href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer" />}><FileCode2 /> GitHub</Button>
+        <div className="nav-links"><a href="#how-it-works">How it works</a><Link href="/docs">Docs</Link><a href="#install">Install</a></div>
+        <a className="github-button" href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer"><FileCode2 /> GitHub</a>
       </nav>
 
       <section className="hero shell" id="top">
@@ -32,8 +33,8 @@ export default function Home() {
         <h1>Put a brake on<br />wasteful agent runs.</h1>
         <p className="hero-copy">BuildBrake gives Codex a clear finish line, a resource budget, and a proof check before it touches your code.</p>
         <div className="hero-actions">
-          <Button className="primary-cta" render={<a href="#install" />}>Install BuildBrake <ArrowRight /></Button>
-          <Button className="secondary-cta" variant="outline" render={<a href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer" />}>View source <FileCode2 /></Button>
+          <a className="primary-cta" href="#install">Install BuildBrake <ArrowRight /></a>
+          <a className="secondary-cta" href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer">View source <FileCode2 /></a>
         </div>
         <p className="support-note">macOS and Linux · Windows via WSL2 · Python 3.9+</p>
 
@@ -80,7 +81,7 @@ export default function Home() {
       </div></section>
 
       <section className="evidence-section shell" id="evidence">
-        <div className="evidence-copy"><div className="section-kicker">Measured, not promised</div><h2>Less input.<br />Fewer commands.<br />Same proved outcomes.</h2><p>Nine controlled comparisons used identical tasks, models, and starting commits. This is a small sample, not a guarantee for every project.</p><a href="https://github.com/karangandhidev/buildbrake/blob/main/docs/MICRO_BENCHMARK.md" target="_blank" rel="noreferrer">Read the method and every result <ArrowRight /></a></div>
+        <div className="evidence-copy"><div className="section-kicker">Measured, not promised</div><h2>Less input.<br />Fewer commands.<br />Same proved outcomes.</h2><p>Nine controlled comparisons used identical tasks, models, and starting commits. This is a small sample, not a guarantee for every project.</p><Link href="/docs/benchmarks">Read the method and every result <ArrowRight /></Link></div>
         <div className="evidence-board">
           <div className="metric-big"><span>New input tokens</span><strong>35.6%</strong><em>fewer</em></div>
           <div className="metric-pair"><div><span>Total input</span><strong>32.8%</strong><em>fewer</em></div><div><span>Agent commands</span><strong>52%</strong><em>fewer</em></div></div>
@@ -93,8 +94,8 @@ export default function Home() {
         <div className="terminal-card"><div className="terminal-bar"><span /><span /><span /><em>Terminal</em></div><pre><code><span>$</span> git clone https://github.com/karangandhidev/buildbrake.git{`\n`}<span>$</span> cd buildbrake{`\n`}<span>$</span> ./install.sh{`\n`}<span>$</span> bb doctor</code></pre><Button className="copy-button" onClick={copyInstall} aria-label="Copy installation commands">{copied ? <Check /> : <Clipboard />} {copied ? 'Copied' : 'Copy commands'}</Button></div>
       </div></section>
 
-      <section className="final-cta shell"><div className="final-mark"><span className="mark large"><span /></span></div><h2>Ship with proof,<br />not guesswork.</h2><p>Open source, local-first guardrails for Codex.</p><Button className="primary-cta" render={<a href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer" />}>Get BuildBrake <ArrowRight /></Button></section>
-      <footer className="shell"><a className="wordmark" href="#top"><span className="mark"><span /></span>BuildBrake</a><p>Built by Karan Gandhi · MIT License</p><div><a href="https://github.com/karangandhidev/buildbrake">GitHub</a><a href="https://github.com/karangandhidev/buildbrake/releases">Releases</a><a href="https://github.com/karangandhidev/buildbrake/issues">Issues</a></div></footer>
+      <section className="final-cta shell"><div className="final-mark"><span className="mark large"><span /></span></div><h2>Ship with proof,<br />not guesswork.</h2><p>Open source, local-first guardrails for Codex.</p><a className="primary-cta" href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer">Get BuildBrake <ArrowRight /></a></section>
+      <footer className="shell"><a className="wordmark" href="#top"><span className="mark"><span /></span>BuildBrake</a><p>Built by Karan Gandhi · MIT License</p><div><Link href="/docs">Docs</Link><a href="https://github.com/karangandhidev/buildbrake">GitHub</a><a href="https://github.com/karangandhidev/buildbrake/issues">Issues</a></div></footer>
     </main>
   );
 }
