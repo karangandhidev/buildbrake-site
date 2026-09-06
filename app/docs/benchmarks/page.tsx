@@ -30,3 +30,8 @@ export default function Benchmarks() {
     <p className="source-note">The raw narrative and complete per-trial notes remain available in the <a href="https://github.com/karangandhidev/buildbrake/blob/main/docs/MICRO_BENCHMARK.md">source repository</a>.</p>
   </>;
 }
+export const metadata = {
+  title: "Benchmarks | BuildBrake",
+  description: "Review nine controlled comparisons, individual results, and the limits of BuildBrake token savings.",
+  alternates: { canonical: "/docs/benchmarks" },
+};

@@ -29,7 +29,26 @@ bb serve`}</code></pre>
     <h2>Run your first task</h2>
     <ol><li>Use a clean Git branch.</li><li>Enter one observable task under <strong>What should the agent do?</strong></li><li>Leave task size on <strong>Auto</strong>.</li><li>Click <strong>Check and save</strong>, then <strong>Run task</strong>.</li><li>Inspect the Git diff and the BuildBrake receipt.</li></ol>
     <div className="doc-example"><span>Example task</span><p>Change the README installation heading to “Install locally” and verify that the rest of the README is unchanged.</p></div>
+    <h2>Update BuildBrake</h2>
+    <p>To update an existing installation, run these commands inside your original BuildBrake clone, then restart any running dashboard:</p>
+    <pre className="doc-code"><code>{`git pull --ff-only
+./install.sh
+bb doctor`}</code></pre>
+    <h2>Troubleshooting</h2>
+    <h3>The terminal cannot find bb</h3>
+    <p>Use the absolute command printed by the installer, or add its command directory to your shell PATH. Open a new terminal after saving a PATH change. Run <code>bb doctor</code> to check the installation.</p>
+    <h3>Changes do not appear in the dashboard</h3>
+    <p>A normal installation uses an installed copy of BuildBrake. Editing the cloned source does not update that copy. For development, run <code>./install.sh --editable</code> once inside the clone. Refresh the browser after HTML changes and restart <code>bb serve</code> after Python changes.</p>
+    <h3>A completed task is not marked proved</h3>
+    <p>Completion means the agent stopped. Check the receipt for a failed verification command or an unresolved target. A visual or usability result may need human review even when tests pass. Review the changes, then record your outcome and reason in the dashboard.</p>
+    <h3>The wrong project appears</h3>
+    <p>Stop the dashboard, change to the intended project folder, and run <code>bb serve</code> again. Confirm the folder displayed above the task form before starting work.</p>
     <h2>Uninstall</h2>
     <p>The default installation lives under <code>~/.local/share/buildbrake</code>. Command links live in <code>~/.local/bin</code>, or <code>/opt/homebrew/bin</code> when writable. Remove those links and the isolated directory to uninstall it.</p>
   </>;
 }
+export const metadata = {
+  title: "Getting started | BuildBrake",
+  description: "Install BuildBrake, run your first task, update your installation, and troubleshoot common problems.",
+  alternates: { canonical: "/docs/getting-started" },
+};

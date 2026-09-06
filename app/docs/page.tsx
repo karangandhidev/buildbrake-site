@@ -17,3 +17,8 @@ export default function DocsOverview() {
     <p>BuildBrake does not replace Codex, provide an OpenAI account, or guarantee that every task will use fewer tokens. It makes the intended outcome explicit, limits execution, narrows supplied context, and records what happened so the result can be evaluated.</p>
   </>;
 }
+export const metadata = {
+  title: "Documentation | BuildBrake",
+  description: "Install, run, and understand BuildBrake with practical guides and measured benchmark results.",
+  alternates: { canonical: "/docs" },
+};

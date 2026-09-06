@@ -21,3 +21,8 @@ export default function HowItWorks() {
     <p>A run can be efficient and wrong. It can also exceed a token target and still produce the correct result. BuildBrake therefore displays resource use and outcome proof separately.</p>
   </>;
 }
+export const metadata = {
+  title: "How it works | BuildBrake",
+  description: "Understand task scope, context selection, resource limits, and outcome verification.",
+  alternates: { canonical: "/docs/how-it-works" },
+};

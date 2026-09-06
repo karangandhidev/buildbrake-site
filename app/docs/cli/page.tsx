@@ -27,3 +27,8 @@ bb agent --model user-default --prompt "Use my configured model"`}</code></pre>
     <pre className="doc-code"><code>bb run --no-checkpoints -- npm test</code></pre>
   </>;
 }
+export const metadata = {
+  title: "CLI reference | BuildBrake",
+  description: "Commands for running tasks, reviewing outcomes, and inspecting BuildBrake usage.",
+  alternates: { canonical: "/docs/cli" },
+};

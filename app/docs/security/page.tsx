@@ -15,3 +15,8 @@ export default function Security() {
     <p>Do not open a public issue containing credentials, private source code, or an unpatched exploit. Use <a href="https://github.com/karangandhidev/buildbrake/security/advisories/new">GitHub private vulnerability reporting</a> and include the affected version, reproduction steps, impact, and suggested mitigation.</p>
   </>;
 }
+export const metadata = {
+  title: "Security | BuildBrake",
+  description: "Understand local data, Codex account usage, process permissions, and BuildBrake security boundaries.",
+  alternates: { canonical: "/docs/security" },
+};

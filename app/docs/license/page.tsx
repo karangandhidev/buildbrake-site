@@ -10,3 +10,8 @@ export default function License() {
     <div className="doc-callout"><strong>Plain-language summary</strong><p>This page explains the license but does not replace it. Read the complete license text in the source repository before redistributing the project.</p><a href="https://github.com/karangandhidev/buildbrake/blob/main/LICENSE">Read the full MIT License →</a></div>
   </>;
 }
+export const metadata = {
+  title: "License | BuildBrake",
+  description: "Read the terms for using, modifying, and distributing BuildBrake under the MIT License.",
+  alternates: { canonical: "/docs/license" },
+};
