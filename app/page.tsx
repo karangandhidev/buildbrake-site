@@ -1,7 +1,7 @@
+/* oxlint-disable next/no-html-link-for-pages -- Static export uses native navigation because Vinext client links fail in production. */
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { ArrowRight, Check, CheckCircle2, Clipboard, Clock3, Command, FileCode2, Gauge, ShieldCheck, TerminalSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -24,7 +24,7 @@ export default function Home() {
     <main>
       <nav className="site-nav" aria-label="Main navigation">
         <a className="wordmark" href="#top" aria-label="BuildBrake home"><span className="mark"><span /></span>BuildBrake</a>
-        <div className="nav-links"><a href="#how-it-works">How it works</a><Link href="/docs">Docs</Link><a href="#install">Install</a></div>
+        <div className="nav-links"><a href="#how-it-works">How it works</a><a href="/docs">Docs</a><a href="#install">Install</a></div>
         <a className="github-button" href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer"><FileCode2 /> GitHub</a>
       </nav>
 
@@ -81,7 +81,7 @@ export default function Home() {
       </div></section>
 
       <section className="evidence-section shell" id="evidence">
-        <div className="evidence-copy"><div className="section-kicker">Measured, not promised</div><h2>Less input.<br />Fewer commands.<br />Same proved outcomes.</h2><p>Nine controlled comparisons used identical tasks, models, and starting commits. This is a small sample, not a guarantee for every project.</p><Link href="/docs/benchmarks">Read the method and every result <ArrowRight /></Link></div>
+        <div className="evidence-copy"><div className="section-kicker">Measured, not promised</div><h2>Less input.<br />Fewer commands.<br />Same proved outcomes.</h2><p>Nine controlled comparisons used identical tasks, models, and starting commits. This is a small sample, not a guarantee for every project.</p><a href="/docs/benchmarks">Read the method and every result <ArrowRight /></a></div>
         <div className="evidence-board">
           <div className="metric-big"><span>New input tokens</span><strong>35.6%</strong><em>fewer</em></div>
           <div className="metric-pair"><div><span>Total input</span><strong>32.8%</strong><em>fewer</em></div><div><span>Agent commands</span><strong>52%</strong><em>fewer</em></div></div>
@@ -95,7 +95,7 @@ export default function Home() {
       </div></section>
 
       <section className="final-cta shell"><div className="final-mark"><span className="mark large"><span /></span></div><h2>Ship with proof,<br />not guesswork.</h2><p>Open source, local-first guardrails for Codex.</p><a className="primary-cta" href="https://github.com/karangandhidev/buildbrake" target="_blank" rel="noreferrer">Get BuildBrake <ArrowRight /></a></section>
-      <footer className="shell"><a className="wordmark" href="#top"><span className="mark"><span /></span>BuildBrake</a><p>Built by Karan Gandhi · MIT License</p><div><Link href="/docs">Docs</Link><a href="https://github.com/karangandhidev/buildbrake">GitHub</a><a href="https://github.com/karangandhidev/buildbrake/issues">Issues</a></div></footer>
+      <footer className="shell"><a className="wordmark" href="#top"><span className="mark"><span /></span>BuildBrake</a><p>Built by Karan Gandhi · MIT License</p><div><a href="/docs">Docs</a><a href="https://github.com/karangandhidev/buildbrake">GitHub</a><a href="https://github.com/karangandhidev/buildbrake/issues">Issues</a></div></footer>
     </main>
   );
 }
